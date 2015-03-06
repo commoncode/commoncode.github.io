@@ -1,0 +1,348 @@
+/*! HTML5 Boilerplate v5.0.0 | MIT License | http://h5bp.com/ */
+
+/*
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+
+html {
+    color: #222;
+    font-size: 1em;
+    line-height: 1.4;
+}
+
+/*
+ * Remove text-shadow in selection highlight:
+ * https://twitter.com/miketaylr/status/12228805301
+ *
+ * These selection rule sets have to be separate.
+ * Customize the background color to match your design.
+ */
+
+::-moz-selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+::selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+/*
+ * A better looking default horizontal rule
+ */
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+/*
+ * Remove the gap between audio, canvas, iframes,
+ * images, videos and the bottom of their containers:
+ * https://github.com/h5bp/html5-boilerplate/issues/440
+ */
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+    vertical-align: middle;
+}
+
+/*
+ * Remove default fieldset styles.
+ */
+
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+
+textarea {
+    resize: vertical;
+}
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+body {
+  font-family: "proxima-nova";
+  font-weight: 300;
+}
+
+section {
+  width: 100%;
+  padding: 80px 0;
+}
+
+header {
+  background: -webkit-linear-gradient(left bottom, #fb078c, #ef9868);
+  background: -o-linear-gradient(top right, #fb078c, #ef9868);
+  background: -moz-linear-gradient(top right, #fb078c, #ef9868);
+  background: linear-gradient(to top right, #fb078c, #ef9868);
+  padding: 220px 0;
+  width: 100%;
+}
+
+.content {
+  display: flex;
+  margin: 0 auto;
+  width: 90%;
+  max-width: 880px;
+
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: flex-end;
+  align-items: flex-start;
+}
+
+.content img {
+  width: 100%;
+  max-width: 440px;
+}
+
+header h1 {
+  margin: 0;
+  padding: 0;
+  margin-bottom: 30px;
+}
+
+.byline {
+  background: #9d62a9;
+  -moz-box-shadow: -5px 5px rgba(183,153,190,0.85);
+  box-shadow: -5px 5px rgba(183,153,190,0.85);
+  display: inline-block;
+  padding: 1%;
+  margin-bottom: 0;
+  margin-top: 0;
+  color: #fff;
+  font-size: 1.2em;
+}
+
+h2 {
+  font-family: "aktiv-grotesk-std", monospace;
+  font-size: 4em;
+  font-weight: 800;
+  text-transform: uppercase;
+  margin: 0;
+  padding: 0;
+  line-height: 100%;
+}
+
+section h3 {
+  background: -webkit-linear-gradient(left, #9d62a9 20%, #fb078c 50%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  font-family: "aktiv-grotesk-std", monospace;
+  font-size: 2.2em;
+  font-weight: 800;
+
+  margin-top: 0;
+  margin-bottom: 0.1em;
+}
+
+section .block {
+  width: 70%;
+  margin-bottom: 40px;
+}
+
+section .block:nth-child(even) {
+  padding-left: 30%;
+}
+
+section .block:last-child {
+  margin-bottom: 0;
+}
+
+footer {
+  background: -webkit-linear-gradient(left bottom, #6d58a9, #9c63a9);
+  background: -o-linear-gradient(top right, #6d58a9, #9c63a9);
+  background: -moz-linear-gradient(top right, #6d58a9, #9c63a9);
+  background: linear-gradient(to top right, #6d58a9, #9c63a9);
+  width: 100%;
+  color: white;
+}
+
+footer h2 {
+  margin-bottom: 40px;
+}
+
+footer a {
+  color: white;
+  text-decoration: none;
+}
+
+footer #common-map {
+  height: 480px;
+  width: 33%;
+  float: left;
+}
+
+footer .contact {
+  float: left;
+  padding: 40px;
+}
+
+footer ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+footer ul li {
+  padding-bottom: 20px;
+}
+
+footer ul li i {
+  text-align: left;
+  display: block;
+  height: 100%;
+  width: 30px;
+  line-height: 1.4!important;
+}
+
+
+header .byline:before {
+  content: "Industry-leading coders serving international clients and building local communities";
+}
+
+@media only screen and (min-width: 1023px) and (max-width: 1279px) {
+    header .byline:before {
+      content: "Coders serving global clients and local communities";
+    }
+}
+
+
+@media only screen and (min-width: 768px) and (max-width: 1023px){
+    header .byline:before {
+      content: "Coders serving client and community";
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    header .byline:before {
+      content: "Client and community";
+    }
+
+    section .block {
+      width: 100%;
+      margin-bottom: 40px;
+    }
+
+    section .block:nth-child(even) {
+      padding-left: 0;
+    }
+
+    footer .contact {
+      margin-top: -770px;
+      height: 340px;
+    }
+
+    footer #common-map {
+      height: 400px;
+      width: 100%;
+      margin-top: 380px;
+    }
+
+    h2 {
+      font-size: 3.4em;
+    }
+}
+
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+/*
+ * Hide visually and from screen readers:
+ * http://juicystudio.com/article/screen-readers-display-none.php
+ */
+
+.hidden {
+    display: none !important;
+    visibility: hidden;
+}
+
+/*
+ * Hide only visually, but have it available for screen readers:
+ * http://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+ */
+
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+/*
+ * Extends the .visuallyhidden class to allow the element
+ * to be focusable when navigated to via the keyboard:
+ * https://www.drupal.org/node/897638
+ */
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+}
+
+/*
+ * Hide visually and from screen readers, but maintain layout
+ */
+
+.invisible {
+    visibility: hidden;
+}
+
+/*
+ * Clearfix: contain floats
+ *
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    `contenteditable` attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that receive the `clearfix` class.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+
+.clearfix:before,
+.clearfix:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.clearfix:after {
+    clear: both;
+}

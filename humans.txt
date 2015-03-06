@@ -1,0 +1,7 @@
+# The humans responsible
+
+>>> random.shuffle(coders)
+
+['Gabe', 'Harshad', 'Brenton', 'Gamaliel', 'Nick', 'Dan', 'Jan', 'Sky', 'Daryl',
+ 'Javier', 'Gaurav', 'Yan', 'Jemi', 'Bonnie', 'Tyson', 'Tim', 'David', 'Nicholas',
+ 'Mitch', 'Fabio', 'Kelsaya', 'Curtis', 'Darren', 'Serge', 'Mark']
