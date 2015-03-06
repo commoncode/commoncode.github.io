@@ -84,9 +84,30 @@ textarea {
    Author's custom styles
    ========================================================================== */
 
+a {
+  color: #327CCB;
+  text-decoration: none;
+  -webkit-transition: color .3s;
+  transition: color .3s;
+}
+
+a:hover {
+  color: #ef9868;
+}
+
 body {
   font-family: "proxima-nova";
   font-weight: 300;
+}
+
+h1, h2 {
+  font-family: "aktiv-grotesk-std", monospace;
+  font-size: 4em;
+  font-weight: 800;
+  text-transform: uppercase;
+  margin: 0;
+  padding: 0;
+  line-height: 100%;
 }
 
 section {
@@ -101,6 +122,24 @@ header {
   background: linear-gradient(to top right, #fb078c, #ef9868);
   padding: 220px 0;
   width: 100%;
+}
+
+header h1 {
+  margin: 0;
+  padding: 0;
+  margin-bottom: 30px;
+}
+
+header .byline {
+  background: #9d62a9;
+  -moz-box-shadow: -5px 5px rgba(183,153,190,0.85);
+  box-shadow: -5px 5px rgba(183,153,190,0.85);
+  display: inline-block;
+  padding: 1%;
+  margin-bottom: 0;
+  margin-top: 0;
+  color: #fff;
+  font-size: 1.2em;
 }
 
 .content {
@@ -121,36 +160,8 @@ header {
   max-width: 440px;
 }
 
-header h1 {
-  margin: 0;
-  padding: 0;
-  margin-bottom: 30px;
-}
-
-.byline {
-  background: #9d62a9;
-  -moz-box-shadow: -5px 5px rgba(183,153,190,0.85);
-  box-shadow: -5px 5px rgba(183,153,190,0.85);
-  display: inline-block;
-  padding: 1%;
-  margin-bottom: 0;
-  margin-top: 0;
-  color: #fff;
-  font-size: 1.2em;
-}
-
-h2 {
-  font-family: "aktiv-grotesk-std", monospace;
-  font-size: 4em;
-  font-weight: 800;
-  text-transform: uppercase;
-  margin: 0;
-  padding: 0;
-  line-height: 100%;
-}
-
 section h3 {
-  background: -webkit-linear-gradient(left, #9d62a9 20%, #fb078c 50%);
+  background: -webkit-linear-gradient(left, #9c63a9 20%, #e7238e 50%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 
@@ -162,16 +173,16 @@ section h3 {
   margin-bottom: 0.1em;
 }
 
-section .block {
+section .content__block {
   width: 70%;
   margin-bottom: 40px;
 }
 
-section .block:nth-child(even) {
+section .content__block:nth-child(even) {
   padding-left: 30%;
 }
 
-section .block:last-child {
+section .content__block:last-child {
   margin-bottom: 0;
 }
 
@@ -199,7 +210,7 @@ footer #common-map {
   float: left;
 }
 
-footer .contact {
+footer .contact__detail {
   float: left;
   padding: 40px;
 }
@@ -216,12 +227,15 @@ footer ul li {
 
 footer ul li i {
   text-align: left;
-  display: block;
-  height: 100%;
-  width: 30px;
   line-height: 1.4!important;
+  width: 20px;
+  position: absolute;
 }
 
+footer ul li .list__detail {
+  margin-left: 30px;
+  display: block;
+}
 
 header .byline:before {
   content: "Industry-leading coders serving international clients and building local communities";
@@ -245,16 +259,16 @@ header .byline:before {
       content: "Client and community";
     }
 
-    section .block {
+    section .content__block {
       width: 100%;
       margin-bottom: 40px;
     }
 
-    section .block:nth-child(even) {
+    section .content__block:nth-child(even) {
       padding-left: 0;
     }
 
-    footer .contact {
+    footer .contact__detail {
       margin-top: -770px;
       height: 340px;
     }

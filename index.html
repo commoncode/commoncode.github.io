@@ -26,7 +26,7 @@
         <header>
           <div class="content">
             <h1>
-              <img src="./img/commoncode-logo.png" alt="Common Code" class="logo" />
+              <img src="img/commoncode-logo.png" alt="Common Code" class="logo" />
             </h1>
 
             <div class="byline"></div>
@@ -35,19 +35,19 @@
 
         <section>
           <div class="content">
-            <div class="block">
+            <div class="content__block">
               <h3>We believe in our clients</h3>
               <p>
                 We excel in building robust, architected applications that are scalable in reach, requirement and need. We work with companies that represent some of the world's leading proactive businesses who require the most progressive web solutions.
               </p>
             </div>
-            <div class="block">
+            <div class="content__block">
               <h3>We believe in our culture</h3>
               <p>
                 Along with this commitment to excellence, we believe we have a responsibility to facilitate learning and networking opportunities for our local community. This is reflected in the classes, meetups and seminars we run through our Melbourne studio.
               </p>
             </div>
-            <div class="block">
+            <div class="content__block">
               <h3>Teams built to succeed</h3>
               <p>
                 Through these events, we have the unique ability to forge relationships and recruit world class coding teams, all while fostering a progressive, inclusive Common Code culture.
@@ -58,26 +58,34 @@
 
         <footer class="clearfix">
           <div id="common-map"></div>
-          <div class="contact">
+          <div class="contact__detail">
             <h2>Let's talk</h2>
 
             <ul>
               <li>
                 <i class="fa fa-phone"></i>
-                0423 972 657
+                <span class="list__detail">
+                  0423 972 657
+                </span>
               </li>
               <li>
                 <i class="fa fa-envelope-o"></i>
-                weare@commoncode.com.au
+                <span class="list__detail">
+                  weare@commoncode.com.au
+                </span>
               </li>
               <li>
                 <i class="fa fa-map-marker"></i>
-                8 Studley Street,<br>
-                Abbotsford, Victoria, Australia
+                <span class="list__detail">
+                  8 Studley Street,<br>
+                  Abbotsford, Victoria, Australia
+                </span>
               </li>
               <li>
                 <i class="fa fa-twitter"></i>
-                <a href="https://twitter.com">@commoncode</a>
+                <span class="list__detail">
+                  <a href="https://twitter.com/commoncode">@commoncode</a>
+                </span>
               </li>
             </ul>
           </div>
@@ -88,28 +96,21 @@
         <script charset="utf-8">
           google.maps.event.addDomListener(window, 'load', init);
           function init() {
-            // Basic options for a simple Google Map
-            // For more options see: https://developers.google.com/maps/documentation/javascript/reference#MapOptions
             var mapOptions = {
-                // How zoomed in you want the map to start at (always required)
                 zoom: 16,
 
                 // The latitude and longitude to center the map (always required)
-                center: new google.maps.LatLng(-37.801090, 144.993362), // New York
+                center: new google.maps.LatLng(-37.801090, 144.993362),
                 disableDefaultUI: true,
-                // How you would like to style the map.
-                // This is where you would paste any style found on Snazzy Maps.
+
+                // styles from Snazzy Maps: https://snazzymaps.com/
                 styles: [{"featureType":"all","elementType":"all","stylers":[{"gamma":"0.83"},{"saturation":"-86"}]},{"featureType":"all","elementType":"geometry","stylers":[{"saturation":"-31"},{"lightness":"15"}]},{"featureType":"all","elementType":"geometry.fill","stylers":[{"saturation":"-99"}]},{"featureType":"all","elementType":"labels","stylers":[{"saturation":"-63"},{"gamma":"1.14"}]},{"featureType":"all","elementType":"labels.text","stylers":[{"gamma":"0.92"}]},{"featureType":"all","elementType":"labels.text.fill","stylers":[{"gamma":"1.29"},{"saturation":"-6"}]},{"featureType":"all","elementType":"labels.text.stroke","stylers":[{"gamma":"1.00"}]},{"featureType":"all","elementType":"labels.icon","stylers":[{"weight":"0.01"},{"gamma":"0.00"},{"lightness":"-29"},{"saturation":"-82"}]},{"featureType":"administrative.country","elementType":"all","stylers":[{"gamma":"1.00"}]}]
             };
 
-            // Get the HTML DOM element that will contain your map
-            // We are using a div with id="map" seen below in the <body>
             var mapElement = document.getElementById('common-map');
-
-            // Create the Google Map using our element and options defined above
             var map = new google.maps.Map(mapElement, mapOptions);
 
-            // Let's also add a marker while we're at it
+            // Let's add the Code Shop to our map
             var marker = new google.maps.Marker({
                 position: new google.maps.LatLng(-37.801090, 144.993362),
                 map: map,
