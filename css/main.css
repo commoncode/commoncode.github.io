@@ -116,6 +116,7 @@ section {
 }
 
 header {
+  background-color: #ef9868;
   background: -webkit-linear-gradient(left bottom, #fb078c, #ef9868);
   background: -o-linear-gradient(top right, #fb078c, #ef9868);
   background: -moz-linear-gradient(top right, #fb078c, #ef9868);
@@ -161,6 +162,8 @@ header .byline {
 }
 
 section h3 {
+  color: #9c63a9;
+
   background: -webkit-linear-gradient(left, #9c63a9 20%, #e7238e 50%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -255,6 +258,10 @@ header .byline:before {
 }
 
 @media only screen and (max-width: 767px) {
+    header {
+      padding: 140px 0;
+    }
+
     header .byline:before {
       content: "Client and community";
     }
