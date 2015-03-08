@@ -116,7 +116,7 @@ section {
 }
 
 header {
-  background-color: #ef9868;
+  background-color: #fb078c;
   background: -webkit-linear-gradient(left bottom, #fb078c, #ef9868);
   background: -o-linear-gradient(top right, #fb078c, #ef9868);
   background: -moz-linear-gradient(top right, #fb078c, #ef9868);
@@ -190,6 +190,7 @@ section .content__block:last-child {
 }
 
 footer {
+  background-color: #6d58a9;
   background: -webkit-linear-gradient(left bottom, #6d58a9, #9c63a9);
   background: -o-linear-gradient(top right, #6d58a9, #9c63a9);
   background: -moz-linear-gradient(top right, #6d58a9, #9c63a9);
